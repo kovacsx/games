@@ -16,7 +16,7 @@ import time
 
 # testProgram = "1" * 100 + "110000111100111101001111110111100111110010000111100100000101010111011000011100100100100101010110010000110111100101101110111001001001110001101110010011101010001010010001100101011011001001001001111010111001010101000000100101011001001001110011000111011001110001100001001101111111100010001110001001100100100010101111010001010011011111101011010011011101001101011000100001101001100010011100110111101001111000010101000100101111011010000010010110001001100010110110001101111101011100101000011010010000101011001100110110000011100111100100"
 # testProgram = "1" * 20 + "010101010101" + "1" * 20
-testProgram = "1" * 100
+testProgram = "1" + "1" * 40  + "1" * 4 + "1"
 
 # testProgram = "".join(['0' if r % 2 == 0 else '1' for r in range(1,20)])
 
@@ -36,20 +36,11 @@ def addProg(p1, p2):
 def collatz(program):
 	try:
 
-		count1s = program.count('1')
-		count0s = program.count('0')
-
-		print(f"Program ({count0s:4} : {count1s:4} : {count1s - count0s:4} : {len(program):4})\t: {program}")
-
 		if(len(program) <= 1):
 			# print(f"Done: {program}")
 			return program
 
-		if(program[0] == '0'):
-			# print(f"<<< <<< ({count0s:4} : {count1s:4} : {len(program)-1:4})\t: {program[1:]}")
-			# print()
-			return program[1:]
-		elif(program[0] == '1'):
+		if(program[0] == '1'):
 			p1 = '0' + program;
 			# print(f">>> >>> ({count0s:4} : {count1s:4} : {len(program):4})\t: {p1}")
 			p2 = addProg(p1, program)
@@ -58,6 +49,10 @@ def collatz(program):
 			# print(f">>> >>> ({count0s:4} : {count1s:4} : {len(program):4})\t: {p3}")
 			# print()
 			return p3
+		elif(program[0] == '0'):
+			# print(f"<<< <<< ({count0s:4} : {count1s:4} : {len(program)-1:4})\t: {program[1:]}")
+			# print()
+			return program[1:]
 			
 
 		raise Exception(f"program contains invalid symbol: {program[0]}")
@@ -68,12 +63,17 @@ def collatz(program):
 
 def solver(program):
 	totalIterations = int(0)
-	progLen = len(program)
-	while(progLen > 1):
+	while(len(program) > 1):
+		count1s = program.count('1')
+		count0s = program.count('0')
+		print(f"Program ({count0s:4} : {count1s:4} : {count1s - count0s:4} : {len(program):4})\t: {program}")
+
 		program = collatz(program)
+
 		totalIterations = totalIterations + 1
 
-		progLen = len(program)
+		if totalIterations > 20000:
+			break
 
 		# time.sleep(1 / 20)
 
