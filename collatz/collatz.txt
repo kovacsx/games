@@ -7,7 +7,7 @@ The Collatz conjecture is: This process will eventually reach the number 1, rega
 
 Thus questions:
 
-1. Does "while(n > 1) { n << collatz(n); }; return 1 " will return 1 for every n? (ie. halting problem) 
+1. Does "while(n > 1) { n << collatz(n); }; return 1 ") will return 1 for every n? (ie. halting problem) 
 
 2. How to estimate the time it takes for an arbitrary number n ("program") to "convolute" to 1. 
 
@@ -16,12 +16,36 @@ Thus questions:
 
 1.
 
+Let's think bit differently of the problem- 
+
+First transform the n from a number to as a sequence of N-bits (n requires at most log2(n)+1 bits)
+
+Problem can be split in 2 sub-problems, which for simplicity is called Thief and Policeman and N-bits between them Obstacles:
+
+Thus:
+
+Thief tries to escape
+Policeman tries to catch the Thief
+
+And question will be as follow-
+
+1. Does for any Obstacles between Thief and Police, Police will catch the Thief or Thief will succesfully escape (or at least keep distance same. Running for life... hard! :D )
+
+
+Now, lets analyze speed of Policeman ("Tail") and Thief ("Head")
+
+"Movement" of policeman: if way ahead is empty, run till first box
+
+
+
+
+
 Rewrite f assuming p is list that encodes n as a list of bits (0 and 1) that define following operations:
 
-log2(n).....31....0 - bit order
+0.... 31 .... log2(n) + 1 - bit order / bits
 
->> - left shift
-<< - right shift
+pop - decrease list size by 1
+push - increase list size by 1
 [] : {0:1}
 
 and use property that "x * 3" can be rewritten as "x << 1 + x" as "x * 2" is same as "x << 1" 
@@ -35,13 +59,13 @@ Let's analyze the function:
 
 "Decrease (even) branch" (p[0] == 0) :
 
-p >> 1 : decreases list size by 1, removing "bit" at position 0, thus len(p) decreases by 1
+pop(p) : decreases list size by 1, removing "bit" at position 0, thus len(p) decreases by 1
 
 "Increase (odd) branch" (p[0] == 1):
 
 p << 1 + p + 1
 
-	1. p1 := p << 1 - increases list size by 1.
+	1. p1 := push(p) - increases list size by 1.
 	2. p2 := p1 + p - see explanation below. len(p1) == len(p2) (see below why)
 	3. p3 := p2 + 1 - CAN increase list
 
