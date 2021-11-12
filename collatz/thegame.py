@@ -3,6 +3,7 @@
 
 # Game of Investigator and The Mastermind
 
+import sys
 import time
 from collatz import collatz
 
@@ -13,7 +14,7 @@ clueChar = '-'
 suspectChar = '+'
 mastermindChar = 'M'
 
-# Developer settings
+# Developer options
 
 slowMode = False
 printHeuristics = False
@@ -23,16 +24,11 @@ testDecks = ["1" + "1" * 50  + "1" * 50 + "1",
 			"1" + "1" * 50 + "0"  + "1" * 50 + "1",
 			"1001",
 			"101",
-			]
+			"1"]
 
 # "main loop"
 
-def GameOfInvestigatorAndTheMastermind(program):
-	
-	totalIterations = int(0)
-
-	while(len(program) > 1):
-
+def printDeck(program, totalIterations = 0):
 		if printHeuristics:
 			count1s = program.count('1')
 			count0s = program.count('0')
@@ -41,21 +37,39 @@ def GameOfInvestigatorAndTheMastermind(program):
 		else:
 			print(f"{str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
 
+
+def GameOfInvestigatorAndTheMastermind(program):
+	
+	totalIterations = int(1)
+
+	while(len(program) > 1):
+
 		program = collatz(program)
 
-		totalIterations = totalIterations + 1
+		printDeck(program, totalIterations)
 
+		totalIterations = totalIterations + 1
 
 		if slowMode :
 			time.sleep(1 / 20)
 
-	print(f"Total iterations: {totalIterations}")
+	print(f"Mastermind was captured in: {totalIterations} steps!\nCongratulations!")
 	return True
 
 def main():
 
-	for game in testDecks:
+	if len(sys.argv) > 1:
+		print(f"User game!")
+		game = sys.argv[1].replace('+', '1').replace('-', '0')
+		printDeck(game, 0)
 		GameOfInvestigatorAndTheMastermind(game)
+		print()
+
+	else:
+		for game in testDecks:
+			printDeck(game, 1)
+			GameOfInvestigatorAndTheMastermind(game)
+			print()
 
 	return 0
 

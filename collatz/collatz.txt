@@ -1,5 +1,5 @@
 #
-# "The Game of Investigator and Mastermind" or proof for Collatz conjecture (ie. 3x + 1 problem)
+# "The Game of Investigator and Mastermind" .. or .. proof for Collatz conjecture (ie. 3x + 1 problem)
 # by Janis Kovalevskis (janis.kovalevskis@gmail.com) (c) 2021, all respective rights apply
 #
 
@@ -19,11 +19,13 @@ Optional:
 
 3. Is it possible to have O(f(x)) GOOD best/worst estimates for any x that can be represented by N bits? -> Guess, it depends on x and it's "fragmentation" of list and O(N*log(N)) in worst case, O(1) for special (best) cases (Answered already?)
 
-I'm trying to answer the 1st and somewhat 2nd as well. Maybe third is answered as well, don't know, it's heuristic, just want to get this game out of my head, thats it!
+--------
 
+I'm trying to answer the 1st and somewhat 2nd question as well. Maybe third is answered as well, don't know, it's "heuristic" I guess.
+
+Just want to get this "game" out of my head, that's it! 
 
 Thus let's try to reimagine the Collatz conjecture as the "Game of Investigator and the Mastermind"!
-
 
 Enjoy! :)
 
@@ -91,15 +93,15 @@ Flow of the game:
 	Interrogation:
 		Police questions the suspect (2x) ("Let's take a step back. Tell us what you know about ...!". 
 			Evidence is "shifted" to the right side and new Clue appears at the beginning of the list
+
 		Police crossreferences the suspect (+x) ("So if I understand you correctly, everything was like this...? Did you meet or talk to anybody...?")
 			Start adding together new Evidence list, with old list, using additive principle, we update knowledge on clues/suspects.
 			Chain of these events might create "a police tip", that advances Mastermind position and leaves a new clue behind him. (as if that would help him!)
 
-
-		"Domino effect" (+1) -> "It's not me! I know who did it!"
+		"Domino effect" (+1) -> "It's not me! But I know who did it!"
 			Any Suspects now in front of Investigator  become Clues and a new Suspect shows at the end of Clues list.
 
-	Police work continues!
+		Police work continues!
 
 	Mastermind (during cross-reference step):
 		if through interrogation during police cross-reference Mastermind receives "a tip", he'll try to cover up a bit more, by leaving a new Clue, behind him and advancing by 1 position.
@@ -108,7 +110,7 @@ Flow of the game:
 		Mastermind DOES NOT info on all the cross-references, unless 
 
 	Crossreferencing the suspects:
-		... (adding binary numbers)
+		... (adding binary numbers) ... 
 
 	The "domino effect":
 		"It's as easy as bringing down one or all of them, but the alignment has to be right." (Takeshi Kovacs)
@@ -163,19 +165,21 @@ Q: Why does it work like that?
 
 A: Because for every of his action Investigator will advance forward for AT LEAST 1 Clue (ie. 1,2,3, ...), while Mastermind moves AT MOST 2 squares for every police Interrogation, thus allowing for Investigator to reach Mastermind eventually.
 
-   Math: In essence adding two binary numbers of length up to N-bits, it'll only yield maximum number with N+1 bits, often same N bits (ie. Mastermind receiving or not the "police tip")
+   Math: In essence adding two binary numbers of length up to N-bits, it'll only yield maximum number with N+1 bits, often same N bits (ie. Mastermind receiving or not always receiving the "police tip")
 
 ---
 
 Q: How often does Mastermind receives police tips?
 
-A: Depends on the "fragmentation" of the Evidence list. The more fragments, the least possibility (?)
+A: Depends on the "fragmentation" of the Evidence list. The more fragments, the least possibility.
+
 
 ----
 
 Q: Why doesn't Mastermind just leave?
 
 A: Don't know.. ask him yourself, if you catch him, that is!
+
 
 
 Thank You & good luck playing "The Game of Investigator and Mastermind" whichever side you decide to play on!
