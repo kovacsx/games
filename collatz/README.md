@@ -15,7 +15,7 @@ all respective rights apply, use at your own risk.
 
 Mastermind has commited a HEINOUS CRIME!!! 
 
-The Presidents doughter's favorite puppy has been stolen!!! 
+The Presidents daughter's favorite puppy has been stolen!!! 
 
 Whole country is laughing now! Is there nothing saint or impossible for Him?! 
 
@@ -50,5 +50,5 @@ Example lists:
 +--+-----+--++----+++-+++-++---+--+
 +++++++++++++++++++++++++++++++++++++++++
 
-Run without list to run some default "games".
+See collatz.txt for full explanation of the rules for the game!
 

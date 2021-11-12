@@ -51,7 +51,7 @@ Backstory:
 
 	Mastermind has commited a HEINOUS CRIME!!! 
 
-	The Presidents doughter's favorite puppy has been stolen!!! 
+	The Presidents daughter's favorite puppy has been stolen!!! 
 
 	Whole country is laughing now! Is there nothing saint or impossible for Him?! 
 
@@ -118,20 +118,22 @@ Flow of the game:
 Endings:
 
 "Investigator wins": 
+
 	Crime has been solved, Trust in president restored and the puppy is back safe and healthy!
 
 	President personally thanks you, You receive a promotion and a two weeks vacation for You accomplishment!
 
-	The presidents daughter makes a selfie with You. Including the puppy, obviouslt! #mastermindgone #love #puppies
+	The presidents daughter makes a selfie with You. On Instagram! Including the puppy, obviously! #mastermindgone #love #puppies 
 
 	The Mastermind in exchange for a 3 months probation and public work, agrees to return the puppy & never commit crimes again!
 
 	Great job .. Lead Investigator!
 
+
 "Mastermind wins":
 	With police off his back Mastermind successfully evades the punishment and enjoys his frivolous lifestyle for many years to come with zero responsibility as before! 
 
-	Still- by now You've probably have hunch, that there is no such ending, right... RIGHT? 
+	Still... by now You've probably have hunch, that there is no such ending, right... RIGHT? 
 
 	Why? Because police & Investigator will never stop! NEVER! Thats why! :)
 
