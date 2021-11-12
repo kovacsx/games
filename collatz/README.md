@@ -21,7 +21,10 @@ all respective rights apply, use at your own risk.
 
 	This must be answered! President requests only the best from the police now!
 
-	It's well known that the crime is performed by the Mastermind, yet how he's exactly connected to the crime is higly elusive, so Police assigns's it's best-of-the-best Investigator on it.. obviously You!
+	It's well known that the crime is performed by the Mastermind, 
+		yet how he's exactly connected to the crime is higly elusive! 
+
+	Police assigns's it's best-of-the-best Investigator on it.. obviously YOU!
 
 	Mastermind, obviously, has mixed feeling on this and intends always stay 1 step ahead of the police work by trying to mislead the Investigator by tampering with already existing clues and suspects leading to him... if he learns about it, that is!	
 
