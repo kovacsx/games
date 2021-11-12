@@ -1,4 +1,6 @@
-The Game of "Investigator and the Mastermind": 
+=============================================
+The Game of "Investigator and the Mastermind"
+=============================================
 
 
 "The perpetrator of a crime will bring something into the crime scene  and leave with something from it, 
@@ -13,6 +15,7 @@ The Game of "Investigator and the Mastermind":
 		But, hey, don't let that stop you!" 
 
 		       (Takeshi Kovacs)
+
 
 --------
 
