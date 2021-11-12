@@ -1,4 +1,3 @@
-# Collatz conjecture / 3x + 1 "runner"
 # by Janis Kovalevskis (janis.kovalevskis@gmail.com) (c) 2021
 # all respective rights apply, use at your own risk.
 
@@ -7,13 +6,14 @@
 # "0101" = 10
 # ...
 
+# f(p) : (p << 1) if (p[0] == 0) else (p >> 1 + p + 1)
 
-# f(p) : (p >> 1) if (p[0] == 0) else (p << 1 + p + 1)
+# while((p := f(p)) > 1);
 
 def collatz(program):
 	try:
 
-		if(len(program) <= 1):
+		if(len(program) < 1):
 			return program
 
 		if(program[0] == '1'):
@@ -24,7 +24,7 @@ def collatz(program):
 		elif(program[0] == '0'):
 			return program[1:]
 
-		raise Exception(f"program contains invalid symbol: {program[0]}")
+		raise Exception(f"Program contains invalid symbol: {program[0]}")
 
 	except Exception as e:
 		raise e

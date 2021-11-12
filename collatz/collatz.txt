@@ -1,5 +1,5 @@
 #
-# Proof for Collatz conjecture (ie. 3x + 1 problem) or "The Game of Investigator and Mastermind"
+# "The Game of Investigator and Mastermind" or proof for Collatz conjecture (ie. 3x + 1 problem)
 # by Janis Kovalevskis (janis.kovalevskis@gmail.com) (c) 2021, all respective rights apply
 #
 
