@@ -13,20 +13,22 @@ all respective rights apply, use at your own risk.
 
 # Story
 
-	Mastermind has commited a HEINOUS CRIME!!! 
+Mastermind has commited a HEINOUS CRIME!!! 
 
-	The Presidents doughter's favorite puppy has been stolen!!! 
+The Presidents doughter's favorite puppy has been stolen!!! 
 
-	Whole country is laughing now! Is there nothing saint or impossible for Him?! 
+Whole country is laughing now! Is there nothing saint or impossible for Him?! 
 
-	This must be answered! President requests only the best from the police now!
+This must be answered! President requests only the best from the police now!
 
-	It's well known that the crime is performed by the Mastermind, 
-		yet how he's exactly connected to the crime is higly elusive! 
+It's well known that the crime is performed by the Mastermind, 
+	yet how he's exactly connected to the crime is higly elusive! 
 
-	Police assigns's it's best-of-the-best Investigator on it.. obviously YOU!
+Police assigns's it's best-of-the-best Investigator on it.. obviously YOU!
 
-	Mastermind, obviously, has mixed feeling on this and intends always stay 1 step ahead of the police work by trying to mislead the Investigator by tampering with already existing clues and suspects leading to him... if he learns about it, that is!	
+Mastermind, obviously, has mixed feeling on this and intends always stay 1 step ahead of the police work 
+	by trying to mislead the Investigator by tampering with already existing clues and suspects 
+		that lead to Him... if He learns about it, that is!	
 
 
 # HowTo run:
