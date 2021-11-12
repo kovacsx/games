@@ -7,14 +7,14 @@ all respective rights apply, use at your own risk.
 
 		and that both can be used as forensic evidence." 
 
-			(The Locard's exchange principle)"
+			("The Locard's exchange principle", Dr. Edmond Locard)
 
 
 	"Any attempt to remove evidence or run with it, will in 2 of 3 cases create new evidence. 
 
 		But, hey, don't let that stop you!"
 
-			(Takeshi Kovacs)
+						(Takeshi Kovacs)
 
 
 # Story
