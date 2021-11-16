@@ -57,10 +57,22 @@ list_of_clues_and_suspects := {-/+} * N
 
 Example lists:
 
-+-+
+++-++
 
 +--+-----+--++----+++-+++-++---+--+
 
 +++++++++++++++++++++++++++++++++++++++++
 
+Example:
 
+python3 thegame.py 11011
+
+
+OR
+
+
+python3 thegame.py [number]
+
+Example:
+
+python3 thegame.py 27
