@@ -62,7 +62,7 @@ Flow of the game:
 
 	Game is played in rounds, with Investigator starting.
 
-	Initially Investigator will process all the available Clues in front of him to reach the next suspect! (ie. x = x / 2). This will ALWAYS remove AT LEAST 1 Clue(s) from the game.
+	Investigator will process all the available Clues in front of him to reach the next suspect! (ie. x = x / 2). This will ALWAYS remove AT LEAST 1 Clue(s) from the game.
 	If the suspect in front of the Investigator is Mastermind (ie. x == 1), the game ends and Mastermind has finally to answer for it's crime! Game ends. See ending "Investigator wins".
 	If the suspect in front of the Investigator is NOT Mastermind, the Investigator will interrogate the suspect!
 
@@ -75,7 +75,7 @@ Flow of the game:
 			Chain of these events might create "a police tip", that advances Mastermind position and leaves a new clue behind him. (as if that would help him!)
 
 		"Domino effect" (+1) -> "It's not me! But I know who did it!"
-			Any Suspects now in front of Investigator  become Clues and a new Suspect shows at the end of Clues list.
+			Any Suspects now in front of Investigator become Clues and a new Suspect shows at the end of Clues list.
 
 		Police work continues!
 
@@ -83,13 +83,14 @@ Flow of the game:
 		if through interrogation during police cross-reference Mastermind receives "a tip", he'll try to cover up a bit more, by leaving a new Clue, behind him and advancing by 1 position.
 		During police cross reference we assume the clues / suspects in-between Investigator and Mastermind will be changed in a fashion unknown to Investigator,
 		BUT we know that it'll be that these "news" will be passed only from suspects from one to another. If these news reach Mastermind, it's called "receiving a tip"
-		Mastermind DOES NOT info on all the cross-references, unless 
+		Mastermind DOES NOT always receives info on all the cross-references, as it's not that he has a direct line to the police!
 
 	Crossreferencing the suspects:
 		... (adding binary numbers) ... 
 
 	The "domino effect":
 		"It's as easy as bringing down one or all of them, but the alignment has to be right." (Takeshi Kovacs)
+
 
 Endings:
 
