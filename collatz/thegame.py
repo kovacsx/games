@@ -17,11 +17,12 @@ mastermindChar = 'M'
 # Developer options
 
 slowMode = False
+printNumbers = False
 printHeuristics = False
 
 # default test program
-testDecks = ["1" + "1" * 50  + "1" * 50 + "1",
-			"1" + "1" * 50 + "0"  + "1" * 50 + "1",
+testDecks = ["1" * 60,
+			"1" * 30 + "0"  + "1" * 30,
 			"1001",
 			"101",
 			"1"]
@@ -34,6 +35,9 @@ def printDeck(program, totalIterations = 0):
 			count0s = program.count('0')
 			
 			print(f"Program ({count0s:4} : {count1s:4} : {count1s - count0s:4} : {len(program):4})\t: {str(investigatorChar * totalIterations * drawInvestigator)} {program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
+		elif printNumbers:
+			progNumber = int(program[::-1], 2)
+			print(f"{progNumber:32} {str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
 		else:
 			print(f"{str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
 
