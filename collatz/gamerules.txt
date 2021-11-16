@@ -75,6 +75,9 @@ Flow of the game:
 			Chain of these events might create "a police tip", that advances Mastermind position and leaves a new clue behind him. (as if that would help him!)
 
 		"Domino effect" (+1) -> "It's not me! But I know who did it!"
+
+			"It's as easy as bringing down one or all of them, but the alignment has to be right." (Takeshi Kovacs)
+
 			Any Suspects now in front of Investigator become Clues and a new Suspect shows at the end of Clues list.
 
 		Police work continues!
@@ -89,7 +92,7 @@ Flow of the game:
 		... (adding binary numbers) ... 
 
 	The "domino effect":
-		"It's as easy as bringing down one or all of them, but the alignment has to be right." (Takeshi Kovacs)
+		... (binary additions can be thought as domino blocks falling forward) ...
 
 
 Endings:
