@@ -17,29 +17,30 @@ mastermindChar = 'M'
 # Developer options
 
 slowMode = False
-printNumbers = False
+printNumbers = True
 printHeuristics = False
 
 # default test program
 testDecks = ["1" * 60,
 			"1" * 30 + "0"  + "1" * 30,
-			"1001",
-			"101",
-			"1"]
+			"11011",
+			"1001"]
 
 # "main loop"
 
 def printDeck(program, totalIterations = 0):
-		if printHeuristics:
-			count1s = program.count('1')
-			count0s = program.count('0')
-			
-			print(f"Program ({count0s:4} : {count1s:4} : {count1s - count0s:4} : {len(program):4})\t: {str(investigatorChar * totalIterations * drawInvestigator)} {program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
-		elif printNumbers:
-			progNumber = int(program[::-1], 2)
-			print(f"{progNumber:32} {str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
-		else:
-			print(f"{str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
+	global printNumbers
+
+	if printHeuristics:
+		count1s = program.count('1')
+		count0s = program.count('0')
+		
+		print(f"Program ({count0s:4} : {count1s:4} : {count1s - count0s:4} : {len(program):4})\t: {str(investigatorChar * totalIterations * drawInvestigator)} {program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
+	elif printNumbers == True:
+		progNumber = int(program[::-1], 2)
+		print(f"{progNumber:32} {str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
+	else:
+		print(f"{str(investigatorChar * totalIterations * drawInvestigator)}{program.replace('0', clueChar).replace('1', suspectChar) }{mastermindChar}")
 
 
 def GameOfInvestigatorAndTheMastermind(program):
@@ -61,20 +62,28 @@ def GameOfInvestigatorAndTheMastermind(program):
 	return True
 
 def main():
+	global printNumbers
 
 	if len(sys.argv) > 1:
 		print(f"User game!")
-		game = sys.argv[1].replace('+', '1').replace('-', '0')
+
+		if(sys.argv[1].isalnum()):
+			progNum = int(sys.argv[1])
+			game = bin(progNum)[2:][::-1]
+			print(f"{sys.argv[1]} -> {game}")
+			printNumbers = True
+		else:
+			game = sys.argv[1].replace('+', '1').replace('-', '0')
+
 		printDeck(game, 0)
 		GameOfInvestigatorAndTheMastermind(game)
 		print()
 
 	else:
 		for game in testDecks:
+			print(f"\n\n\nNew game:\n\n" )
 			printDeck(game, 1)
 			GameOfInvestigatorAndTheMastermind(game)
-			print()
-
 	return 0
 
 
