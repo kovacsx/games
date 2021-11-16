@@ -44,11 +44,29 @@ See gamerules.txt for full explanation to rules of the game.
 
 # HowTo run:
 
-Game uses Python3
+Game uses Python3.
 
 Usage:
 
 python3 thegame.py [list_of_clues_and_suspects]
+
+Example:
+
+python3 thegame.py ++-++
+
+
+##OR
+
+
+python3 thegame.py [number]
+
+Example:
+
+python3 thegame.py 27
+
+
+------------
+
 
 list_of_clues_and_suspects := {-/+} * N
 
@@ -65,14 +83,5 @@ Example lists:
 
 Example:
 
-python3 thegame.py 11011
 
 
-OR
-
-
-python3 thegame.py [number]
-
-Example:
-
-python3 thegame.py 27
